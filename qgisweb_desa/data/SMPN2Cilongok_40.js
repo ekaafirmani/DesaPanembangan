@@ -1,0 +1,1 @@
+var json_SMPN2Cilongok_40 = {"type":"FeatureCollection","name":"SMPN2Cilongok_40","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"SMPN 2 Cilongok"},"geometry":{"type":"Point","coordinates":[109.128762206759731,-7.384250469534271]}}]}

@@ -1,0 +1,1 @@
+var json_RumahRW_34 = {"type":"FeatureCollection","name":"RumahRW_34","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Rumah RW 01"},"geometry":{"type":"Point","coordinates":[109.131606659045914,-7.384504645842193]}}]}

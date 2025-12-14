@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Website Desa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="glass-effect bg-white/30 backdrop-blur-md border border-white/40 fixed left-10 top-2 right-10 z-20 rounded-full shadow-lg">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3 font-bold text-green-600">
+      <img src="asset/logodesa.png" alt="Logo" class="w-[45px] md:w-[60px] rounded-full border" />
+      <span class="text-[17px] md:text-[20px] bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-transparent">Desa Panembangan</span>
+    </div>
+
+
+    <!-- Menu Desktop -->
+    <nav class="hidden lg:flex gap-2 font-medium text-gray-700">
+      <a href="/ProjectDesa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Beranda</a>
+      <a href="/ProjectDesa/qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 ">Wilayah Desa</a>
+      <a href="/ProjectDesa/kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
+      <a href="/ProjectDesa/tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
+    </nav>
+
+    <!-- Mobile Button -->
+    <div class="menu w-[35px] h-[35px] bg-white rounded-md flex lg:hidden items-center justify-center cursor-pointer"
+      onclick="toggleMenu()">
+      <img src="asset/menu.svg" class="w-[20px]" />
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="toggle-content"
+      class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg hidden transition-all duration-300">
+      <a href="/ProjectDesa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Beranda</a>
+      <a href="/ProjectDesa/qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Desa</a>
+      <a href="/ProjectDesa/kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
+      <a href="/ProjectDesa/tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- SPACE AGAR NAVBAR TIDAK NUTUPI KONTEN -->
+<div class="pt-[50px]"></div>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="bg-grid-pattern pt-32 pb-20" data-aos="fade-up" data-aos-duration="1200">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6">
+
+    <!-- Text Left -->
+   <!-- Text Left -->
+<div class="flex flex-col justify-center space-y-5" data-aos="fade-right" data-aos-duration="1200">
+
+  <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+    <span class="text-gray-900">DESA</span>
+    <span class="bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-transparent">
+      PANEMBANGAN
+    </span>
+  </h1>
+
+  <p class="text-justify text-gray-700 md:text-lg leading-relaxed max-w-lg">
+      Desa Panembangan merupakan salah satu desa yang berada di wilayah Kecamatan Cilongok, 
+      Kabupaten Banyumas, Jawa Tengah. Desa ini terkenal dengan potensi wisata mina padi 
+      (perikanan dan pertanian sawah) melalui program Smart Fisheries Village yang mendorong 
+      inovasi pengelolaan perikanan terpadu, pemberdayaan masyarakat, dan peningkatan hasil 
+      panen. Dengan sumber daya alam yang melimpah, lingkungan yang asri, serta masyarakat yang 
+      ramah, Desa Panembangan terus berkomitmen untuk berkembang dalam sektor pertanian, perikanan, 
+      serta pembangunan desa yang berkelanjutan.
+  </p>
+
+  <a href="tentang.html"
+   class="inline-block w-fit px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg
+          transition-transform duration-500 hover:scale-105 hover:shadow-xl">
+   Lihat Selengkapnya
+</a>
+
+</div>
+
+
+
+    <!-- Image Gallery Right -->
+    <!-- Grid Gallery -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <!-- Foto besar kiri -->
+      <div data-aos="zoom-in" class="rounded-xl overflow-hidden shadow-lg float-anim">
+        <img src="asset/foto3.jpg"
+             class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+      </div>
+
+      <!-- 3 foto kecil kanan -->
+      <div class="grid grid-cols-2 gap-4">
+        
+        <div data-aos="zoom-in" data-aos-delay="100"
+             class="rounded-xl overflow-hidden shadow-lg">
+          <img src="asset/foto2.jpg"
+               class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="200"
+             class="rounded-xl overflow-hidden shadow-lg">
+          <img src="asset/foto1.jpg"
+               class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300"
+             class="rounded-xl col-span-2 overflow-hidden shadow-lg">
+          <img src="asset/image.png"
+               class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= BERITA & KEGIATAN ================= -->
+<section id="berita" class="py-16 bg-green-600/10 relative overflow-hidden">
+
+  <!-- dekorasi lingkaran soft -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-green-500/20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-green-400/20 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      
+    <h2 class="text-3xl font-bold text-green-700 mb-3">Berita & Kegiatan Desa</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-10">
+      Informasi terbaru mengenai kegiatan masyarakat, program desa, pembangunan, dan dokumentasi acara yang berlangsung di Desa Panembangan.
+    </p>
+
+    <!-- Grid Card -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <img src="asset/kegiatan2.jpg" alt="Kegiatan Desa" class="w-full h-52 object-cover">
+        <div class="p-5 text-center space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Pelatihan Budidaya Mina Padi</h3>
+          <p class="text-gray-600 text-sm">
+            Kegiatan ini dilaksanakan sebagai bentuk komitmen dan upaya nyata pemerintah desa dalam 
+            meningkatkan kapasitas sumber daya manusia di bidang pengelolaan Mina Padi, mulai dari aspek
+            teknis budidaya, pengelolaan lahan, hingga 
+            optimalisasi hasil produksi guna mendukung ketahanan pangan dan peningkatan pendapatan masyarakat desa.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <img src="asset/kegiatan1.1.jpg" alt="Kegiatan Desa" class="w-full h-52 object-cover">
+        <div class="p-5 text-center space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Panembangan Adventure Track</h3>
+          <p class="text-gray-600 text-sm">
+            Sebagai salah satu rangkaian kegiatan dalam perayaan Hari Ulang Tahun Kemerdekaan Republik Indonesia,
+            kegiatan ini bertujuan untuk meningkatkan rasa cinta tanah air dan semangat kebangsaan masyarakat 
+            melalui peningkatan pemahaman dan pengetahuan mengenai Desa Panembangan, 
+            termasuk sejarah, potensi, serta peran desa dalam mendukung pembangunan nasional.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
+        <img src="asset/kegiatan3.jpg" alt="Kegiatan Desa" class="w-full h-52 object-cover">
+        <div class="p-5 text-center space-y-2">
+          <h3 class="text-lg font-semibold text-gray-800">Gelar Budaya Bawaslu</h3>
+          <p class="text-gray-600 text-sm">
+            Gelar Budaya yang diselenggarakan oleh Bawaslu Kabupaten Banyumas ini menampilkan pertunjukan ketoprak humor 
+            serta paguyuban seni karawitan Sidalaras Panembangan sebagai media hiburan sekaligus edukasi bagi masyarakat. Kegiatan ini dirangkaikan dengan sosialisasi 
+            pengawasan partisipatif Pemilihan Kepala Daerah (Pilkada) Tahun 2024 oleh Bawaslu Kabupaten Banyumas.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAK ================= -->
+<!-- ================= KONTAK & MEDIA SOSIAL ================= -->
+<!-- ================= KONTAK & MEDIA SOSIAL ================= -->
+<section id="kontak" class="py-14 px-6 max-w-6xl mx-auto">
+
+  <h3 class="text-3xl font-bold text-green-700 text-center mb-4">Kontak & Media Sosial Desa</h3>
+  <p class="text-gray-700 text-center max-w-2xl mx-auto mb-10">
+    Hubungi Pemerintah Desa Panembangan untuk pelayanan informasi, administrasi, maupun kerja sama.
+    Ikuti Media Sosial Kami Untuk Tahu Informasi Desa
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-white p-6 shadow-lg rounded-xl border border-green-200
+            hover:shadow-2xl hover:-translate-y-1 transition duration-300
+            text-center relative overflow-hidden">
+
+    <!-- Judul -->
+    <h4 class="text-xl font-bold text-green-700 mb-3">Kontak Desa</h4>
+
+    <!-- Nomor Telepon -->
+    <div class="bg-green-600/10 rounded-lg p-3 mb-3 border border-green-300/40">
+      <p class="font-semibold text-green-700">Telepon</p>
+      <p class="text-gray-700">
+        <a href="tel:+62281234567" class="hover:text-green-600 transition">
+          (0281) 123 4567
+        </a>
+      </p>
+    </div>
+
+    <!-- Informasi Lain -->
+    <div class="space-y-2 text-gray-700 text-sm">
+
+      <p>
+        <span class="text-green-600 font-semibold">Alamat:</span><br>
+        Jl. Raya Panembangan No. 12,  
+        Kecamatan Cilongok,  
+        Kabupaten Banyumas, Jawa Tengah
+      </p>
+
+      <p>
+        <span class="text-green-600 font-semibold">Email:</span><br>
+        <a href="mailto:desapanembangan@gmail.com"
+          class="hover:text-green-600 transition">
+          desapanembangan@gmail.com
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+   <!-- JAM PELAYANAN (Update agar lebih menarik) -->
+    <div class="bg-white p-6 shadow-lg rounded-xl border border-green-200 hover:shadow-2xl hover:-translate-y-1 transition duration-300 text-center relative overflow-hidden">
+
+      <!-- ornamen dekorasi -->
+      <h4 class="text-xl font-bold text-green-700 mb-3">Jam Pelayanan</h4>
+
+      <div class="bg-green-600/10 rounded-lg p-3 mb-3 border border-green-300/40">
+        <p class="font-semibold text-green-700">Senin - Jumat</p>
+        <p class="text-gray-700">08.00 - 15.00 WIB</p>
+      </div>
+
+      <div class="space-y-1 text-gray-700">
+        <p><span class="text-green-600 font-semibold">Istirahat:</span> 12.00 - 13.00 WIB</p>
+        <p><span class="text-green-600 font-semibold">Weekend:</span> Tutup</p>
+      </div>
+    </div>
+
+
+    <!-- Media Sosial & Website -->
+<div class="bg-white p-6 shadow-lg rounded-xl border border-green-100
+            hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+
+  <h4 class="text-xl font-semibold text-green-700 mb-4 text-center">
+    Media Informasi Resmi
+  </h4>
+
+  <div class="flex flex-col gap-3">
+
+    <!-- WEBSITE DESA -->
+    <a href="https://panembangan.desa.id/" target="_blank"
+       class="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50 transition">
+      <img src="asset/website.png" alt="Website"
+           class="w-7 h-7 object-contain">
+      <span class="font-medium text-gray-700 hover:text-green-700">
+        Website Resmi Desa
+      </span>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a href="https://instagram.com/insta_panembangan" target="_blank"
+       class="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50 transition">
+      <img src="asset/instagram.png" alt="Instagram"
+           class="w-7 h-7 object-contain">
+      <span class="font-medium text-gray-700 hover:text-green-700">
+        Insta Panembangan
+      </span>
+    </a>
+
+    <!-- YOUTUBE -->
+    <a href="https://www.tiktok.com/@panembangan.tourism?_r=1&_t=ZS-92DRRy16Nw8" target="_blank"
+       class="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50 transition">
+      <img src="asset/tiktok.png" alt="Tiktok"
+           class="w-7 h-7 object-contain">
+      <span class="font-medium text-gray-700 hover:text-green-700">
+        Panembangan Tourism
+      </span>
+    </a>
+
+  </div>
+</div>
+
+</section>
+
+
+
+<footer class="bg-green-600 hover:bg-green-700 transition duration-300 text-white py-6">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <p class="font-medium">© 2025 Desa Panembangan - Kecamatan Cilongok, Banyumas</p>
+  </div>
+</footer>
+
+
+
+<script>
+  function toggleMenu() {
+    document.getElementById("toggle-content").classList.toggle("hidden");
+  }
+  AOS.init();
+</script>
+
+</body>
+</html>

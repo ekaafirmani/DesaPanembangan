@@ -1,0 +1,1 @@
+var json_WisataMinaPadi_46 = {"type":"FeatureCollection","name":"WisataMinaPadi_46","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"Wisata Mina Padi","kategori":null},"geometry":{"type":"Point","coordinates":[109.127853347004617,-7.383147932816239]}}]}

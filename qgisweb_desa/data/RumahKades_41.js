@@ -1,0 +1,1 @@
+var json_RumahKades_41 = {"type":"FeatureCollection","name":"RumahKades_41","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Rumah Kepala Desa"},"geometry":{"type":"Point","coordinates":[109.131773336447367,-7.384277911420085]}}]}

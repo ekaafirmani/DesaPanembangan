@@ -1,0 +1,1 @@
+var json_SukanRiverTubing_44 = {"type":"FeatureCollection","name":"SukanRiverTubing_44","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"Sukan River Tubing","kategori":null},"geometry":{"type":"Point","coordinates":[109.129085071773432,-7.378968866636372]}}]}

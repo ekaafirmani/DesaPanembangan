@@ -1,0 +1,1 @@
+var json_Lapangan_47 = {"type":"FeatureCollection","name":"Lapangan_47","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Lapangan Desa Panembangan"},"geometry":{"type":"Point","coordinates":[109.133039542688138,-7.385666369803102]}}]}

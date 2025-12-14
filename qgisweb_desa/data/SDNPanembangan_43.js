@@ -1,0 +1,1 @@
+var json_SDNPanembangan_43 = {"type":"FeatureCollection","name":"SDNPanembangan_43","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"SD Negeri Panembangan","kategori":"Sekolah"},"geometry":{"type":"Point","coordinates":[109.132733074023534,-7.384656631825046]}}]}

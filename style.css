@@ -1,0 +1,44 @@
+.slider-container { position: relative; overflow: hidden; }
+    .slider-wrapper { display: flex; transition: transform 0.5s ease-in-out; }
+    .slide { min-width: 100%; }
+    .slider-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      padding: 8px; border-radius: 50%; cursor: pointer;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .slider-dots {
+      display: flex; justify-content:center; margin-top:10px;
+    }
+    .dot {
+      width:10px; height:10px; background:gray; 
+      border-radius:50%; margin:0 5px; cursor:pointer;
+      opacity:0.5; transition:.3s;
+    }
+    .dot.active { opacity:1; background:#1d68e0; }
+    
+    .bg-grid-pattern {
+      background-image: 
+      linear-gradient(#e6e6e640 1px, transparent 1px),
+      linear-gradient(90deg, #e6e6e640 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    
+    .active-link {
+  background-color: #16a34a; /* green-600 */
+  color: white !important;
+}
+.active-link:hover {
+  background-color: #15803d; /* hover green-700 */
+}
+ /* Animasi gambar mengambang */
+  .float-anim {
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
