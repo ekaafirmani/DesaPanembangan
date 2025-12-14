@@ -25,6 +25,27 @@
       linear-gradient(90deg, #e6e6e640 1px, transparent 1px);
       background-size: 50px 50px;
     }
+    .nav-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: #16a34a;
+  color: white;
+}
+
+.mobile-link {
+  display: block;
+  padding: 10px 16px;
+}
+
+.mobile-link:hover {
+  background: #16a34a;
+  color: white;
+}
+
     
     .active-link {
   background-color: #16a34a; /* green-600 */
