@@ -13,42 +13,42 @@
 
 <body class="bg-gray-100">
 
-<header class="relative z-50 bg-white shadow">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+<!-- ================= NAVBAR ================= -->
+<nav class="glass-effect bg-white/30 backdrop-blur-md border border-white/40 fixed left-10 top-2 right-10 z-20 rounded-full shadow-lg">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
 
     <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <img src="asset/logodesa.png" class="w-10" />
-      <span class="font-bold text-green-600">Desa Panembangan</span>
+    <div class="flex items-center gap-3 font-bold text-green-600">
+      <img src="../asset/logodesa.png" alt="Logo" class="w-[45px] md:w-[60px] rounded-full border" />
+      <span class="text-[17px] md:text-[20px] bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-transparent">Desa Panembangan</span>
     </div>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden lg:flex gap-2 font-medium">
-      <a href="index.html" class="nav-link">Beranda</a>
-      <a href="qgisweb_desa/index.html" class="nav-link">Wilayah Desa</a>
-      <a href="kecamatan/index.html" class="nav-link">Wilayah Kecamatan</a>
-      <a href="tentang.html" class="nav-link">Tentang</a>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden lg:flex gap-2 font-medium text-gray-700">
+      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Beranda</a>
+      <a href="qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
+      <a href="kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
+      <a href="tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
     </nav>
 
     <!-- Mobile Button -->
-    <button onclick="toggleMenu()" class="lg:hidden">
-      <img src="asset/menu.svg" class="w-7">
-    </button>
+    <div class="menu w-[35px] h-[35px] bg-white rounded-md flex lg:hidden items-center justify-center cursor-pointer"
+      onclick="toggleMenu()">
+      <img src="../asset/menu.svg" class="w-[20px]" />
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="toggle-content"
+      class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg hidden transition-all duration-300">
+      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 ">Beranda</a>
+      <a href="qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
+      <a href="kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
+      <a href="tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
+    </div>
+
   </div>
-
-  <!-- Mobile Dropdown -->
-  <div id="mobileMenu"
-    class="hidden absolute right-4 top-16 w-52 bg-white shadow-lg rounded-lg z-50">
-
-    <a href="index.html" class="mobile-link">Beranda</a>
-    <a href="qgisweb_desa/index.html" class="mobile-link">Wilayah Desa</a>
-    <a href="kecamatan/index.html" class="mobile-link">Wilayah Kecamatan</a>
-    <a href="tentang.html" class="mobile-link">Tentang</a>
-  </div>
-</header>
-
-
-
+</nav>
 <!-- SPACE AGAR NAVBAR TIDAK NUTUPI KONTEN -->
 <div class="pt-[50px]"></div>
 
@@ -314,9 +314,18 @@
 
 
 <script>
-function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("hidden");
-}
+  // Highlight menu sesuai halaman aktif
+  const links = document.querySelectorAll(".menu-item");
+  links.forEach(link => {
+    if (link.href.includes(location.pathname.split("/").pop())) {
+      link.classList.add("active-link");
+    }
+  });
+
+  // Toggle menu mobile
+  function toggleMenu() {
+    document.getElementById("toggle-content").classList.toggle("hidden");
+  }
 </script>
 
 
