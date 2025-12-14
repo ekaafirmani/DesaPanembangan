@@ -19,15 +19,15 @@
 
     <!-- Logo -->
     <div class="flex items-center gap-3 font-bold text-green-600">
-      <img src="../asset/logodesa.png" alt="Logo" class="w-[45px] md:w-[60px] rounded-full border" />
+      <img src="asset/logodesa.png" alt="Logo" class="w-[45px] md:w-[60px] rounded-full border" />
       <span class="text-[17px] md:text-[20px] bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-transparent">Desa Panembangan</span>
     </div>
 
 
     <!-- Menu Desktop -->
     <nav class="hidden lg:flex gap-2 font-medium text-gray-700">
-      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Beranda</a>
-      <a href="qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
+      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Beranda</a>
+      <a href="qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 ">Wilayah Desa</a>
       <a href="kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
       <a href="tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
     </nav>
@@ -35,20 +35,41 @@
     <!-- Mobile Button -->
     <div class="menu w-[35px] h-[35px] bg-white rounded-md flex lg:hidden items-center justify-center cursor-pointer"
       onclick="toggleMenu()">
-      <img src="../asset/menu.svg" class="w-[20px]" />
+      <img src="asset/menu.svg" class="w-[20px]" />
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="toggle-content"
-      class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg hidden transition-all duration-300">
-      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 ">Beranda</a>
-      <a href="qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
-      <a href="kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
-      <a href="tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
-    </div>
+<div id="toggle-content"
+  class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg 
+         hidden transition-all duration-300 
+         z-50 pointer-events-auto">
+  
+  <a href="index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Beranda
+  </a>
+
+  <a href="qgisweb_desa/index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Wilayah Desa
+  </a>
+
+  <a href="kecamatan/index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white active-link">
+     Wilayah Kecamatan
+  </a>
+
+  <a href="tentang.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Tentang
+  </a>
+</div>
+
 
   </div>
 </nav>
+
+
 <!-- SPACE AGAR NAVBAR TIDAK NUTUPI KONTEN -->
 <div class="pt-[50px]"></div>
 
@@ -313,21 +334,13 @@
 </footer>
 
 
-<script>
-  // Highlight menu sesuai halaman aktif
-  const links = document.querySelectorAll(".menu-item");
-  links.forEach(link => {
-    if (link.href.includes(location.pathname.split("/").pop())) {
-      link.classList.add("active-link");
-    }
-  });
 
-  // Toggle menu mobile
+<script>
   function toggleMenu() {
     document.getElementById("toggle-content").classList.toggle("hidden");
   }
+  AOS.init();
 </script>
-
 
 </body>
 </html>
