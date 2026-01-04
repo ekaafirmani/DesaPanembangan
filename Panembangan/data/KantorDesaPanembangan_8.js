@@ -1,0 +1,1 @@
+var json_KantorDesaPanembangan_8 = {"type":"FeatureCollection","name":"KantorDesaPanembangan_8","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Kantor Desa Panembangan"},"geometry":{"type":"Point","coordinates":[109.132789859364152,-7.38505433325391]}}]}

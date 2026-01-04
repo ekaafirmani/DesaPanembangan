@@ -1,0 +1,1 @@
+var json_BalaiDesaRancamaya_5 = {"type":"FeatureCollection","name":"BalaiDesaRancamaya_5","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Balai Desa Rancamaya"},"geometry":{"type":"Point","coordinates":[109.14144252668838,-7.384254812393731]}}]}

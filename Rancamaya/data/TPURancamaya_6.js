@@ -1,0 +1,1 @@
+var json_TPURancamaya_6 = {"type":"FeatureCollection","name":"TPURancamaya_6","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"TPU Rancamaya"},"geometry":{"type":"Point","coordinates":[109.140944189748666,-7.382453633781361]}}]}

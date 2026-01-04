@@ -7,6 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 
+  <link rel="icon" type="image/png" href="asset/logodesa.png">
+
+
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
@@ -19,32 +22,102 @@
 
     <!-- Logo -->
     <div class="flex items-center gap-3 font-bold text-green-600">
-      <img src="asset/logodesa.png" alt="Logo" class="w-[45px] md:w-[60px] rounded-full border" />
-      <span class="text-[17px] md:text-[20px] bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-transparent">Desa Panembangan</span>
+      <img src="asset/logodesa.png" class="w-[45px] md:w-[60px] rounded-full border" />
+      <span class="text-[17px] md:text-[20px] bg-gradient-to-r from-green-600 to-lime-500 bg-clip-text text-transparent">
+        Desa Panembangan
+      </span>
     </div>
 
+    <!-- ================= MENU DESKTOP ================= -->
+    <nav class="hidden lg:flex gap-2 font-medium text-gray-700 relative">
 
-    <!-- Menu Desktop -->
-    <nav class="hidden lg:flex gap-2 font-medium text-gray-700">
-      <a href="/ProjectDesa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Beranda</a>
-      <a href="/ProjectDesa/qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 ">Wilayah Desa</a>
-      <a href="/ProjectDesa/kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
-      <a href="/ProjectDesa/tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
+      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition active-link">
+        Beranda
+      </a>
+
+      <!-- Dropdown Desa -->
+      <div class="relative group">
+        <button class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition flex items-center gap-1 ">
+          Wilayah Desa
+          <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg 
+                 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                 transition-all duration-300 z-50">
+
+          <a href="./Panembangan/index.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+            Desa Panembangan
+          </a>
+
+          <a href="./Kalisari/index.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+            Desa Kalisari
+          </a>
+
+          <a href="./Karanglo/index.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+            Desa Karanglo
+          </a>
+          <a href="./Rancamaya/index.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+            Desa Rancamaya
+          </a>
+        </div>
+      </div>
+
+      <a href="kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition">
+        Wilayah Kecamatan
+      </a>
+
+      <a href="tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition">
+        Tentang
+      </a>
+
     </nav>
 
-    <!-- Mobile Button -->
+    <!-- ================= MENU MOBILE ================= -->
     <div class="menu w-[35px] h-[35px] bg-white rounded-md flex lg:hidden items-center justify-center cursor-pointer"
       onclick="toggleMenu()">
       <img src="asset/menu.svg" class="w-[20px]" />
     </div>
 
-    <!-- Mobile Dropdown -->
     <div id="toggle-content"
-      class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg hidden transition-all duration-300">
-      <a href="/ProjectDesa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Beranda</a>
-      <a href="/ProjectDesa/qgisweb_desa/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Desa</a>
-      <a href="/ProjectDesa/kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
-      <a href="/ProjectDesa/tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
+      class="absolute right-0 top-16 w-[220px] rounded-lg bg-white shadow-lg hidden z-50">
+
+      <a href="index.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white active-link">
+        Beranda
+      </a>
+
+      <button onclick="toggleSubmenu()"
+        class="w-full text-left px-4 py-2 hover:bg-green-600 hover:text-white flex justify-between items-center">
+        Wilayah Desa
+        <span id="arrow">▼</span>
+      </button>
+
+      <div id="submenu" class="hidden bg-gray-50">
+        <a href="./Panembangan/index.html" class="block px-6 py-2 hover:bg-green-600 hover:text-white">
+          Desa Panembangan
+        </a>
+        <a href="./Kalisari/index.html" class="block px-6 py-2 hover:bg-green-600 hover:text-white">
+          Desa Kalisari
+        </a>
+        <a href="./Karanglo/index.html" class="block px-6 py-2 hover:bg-green-600 hover:text-white">
+          Desa Karanglo
+        </a>
+         <a href="./Rancamaya/index.html" class="block px-6 py-2 hover:bg-green-600 hover:text-white">
+          Desa Rancamaya
+        </a>
+      </div>
+
+      <a href="kecamatan/index.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+        Wilayah Kecamatan
+      </a>
+
+      <a href="tentang.html" class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+        Tentang
+      </a>
     </div>
 
   </div>

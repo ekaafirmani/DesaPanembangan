@@ -1,0 +1,1 @@
+var json_PKD_11 = {"type":"FeatureCollection","name":"PKD_11","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Pusat Kesehatan Desa Panembangan"},"geometry":{"type":"Point","coordinates":[109.131634313621177,-7.384287447895888]}}]}
