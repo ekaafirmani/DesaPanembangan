@@ -51,7 +51,7 @@
     </head>
     <body class="pt-28">
     
-    <!-- ================= NAVBAR ================= -->
+   <!-- ================= NAVBAR ================= -->
 <nav class="glass-effect bg-white/30 backdrop-blur-md border border-white/40 fixed left-10 top-2 right-10 z-20 rounded-full shadow-lg">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
 
@@ -65,7 +65,7 @@
     <!-- Menu Desktop -->
     <nav class="hidden lg:flex gap-2 font-medium text-gray-700">
       <a href="../index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Beranda</a>
-      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
+      <a href="/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
       <a href="../kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
       <a href="../tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
     </nav>
@@ -77,13 +77,33 @@
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="toggle-content"
-      class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg hidden transition-all duration-300">
-      <a href="../index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 ">Beranda</a>
-      <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 active-link">Wilayah Desa</a>
-      <a href="../kecamatan/index.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Wilayah Kecamatan</a>
-      <a href="../tentang.html" class="px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">Tentang</a>
-    </div>
+   <!-- Mobile Dropdown -->
+<div id="toggle-content"
+  class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg 
+         hidden transition-all duration-300 
+         z-50 pointer-events-auto">
+  
+  <a href="../index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Beranda
+  </a>
+
+  <a href="/index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white active-link">
+     Wilayah Desa
+  </a>
+
+  <a href="../kecamatan/index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Wilayah Kecamatan
+  </a>
+
+  <a href="../tentang.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Tentang
+  </a>
+</div>
+
 
   </div>
 </nav>
@@ -3254,6 +3274,13 @@
         map.on("layerremove", function(){
             resetLabels([layer_BatasDesa_0,layer_RT04_01_5,layer_RT05_01_6,layer_RT03_01_7,layer_RT02_01_8,layer_RT01_01_9,layer_RT01_02_10,layer_RT02_02_11,layer_RT03_02_12,layer_RT04_02_13,layer_RT05_02_14,layer_RT06_02_15,layer_RT07_02_16,layer_RT08_02_17,layer_RT01_03_18,layer_RT02_03_19,layer_RT03_03_20,layer_RT04_03_21,layer_RT05_03_22,layer_RT06_03_23,layer_RT07_03_24,layer_RT08_03_25,layer_RumahRW_34,layer_PKD_35,layer_Makam_36,layer_Toko_37,layer_TempatMakan_38,layer_RumahRT_39,layer_SMPN2Cilongok_40,layer_RumahKades_41,layer_RumahEka_42,layer_SDNPanembangan_43,layer_SukanRiverTubing_44,layer_KantorDesa_45,layer_WisataMinaPadi_46,layer_Lapangan_47,layer_TempatIbadah_48]);
         });
-        </script>        
+        </script>  
+
+		<script>
+		function toggleMenu() {
+		  document.getElementById("toggle-content").classList.toggle("hidden");
+		}
+		</script>
+
     </body>
 </html>

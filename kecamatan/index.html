@@ -119,6 +119,7 @@
       <img src="asset/menu.svg" class="w-[20px]" />
     </div>
 
+<<<<<<< HEAD
     <div id="toggle-content"
       class="absolute right-0 top-16 w-[220px] rounded-lg bg-white shadow-lg hidden z-50">
 
@@ -155,6 +156,36 @@
         Tentang
       </a>
     </div>
+=======
+    <!-- Mobile Dropdown -->
+   <!-- Mobile Dropdown -->
+<div id="toggle-content"
+  class="absolute right-0 top-16 w-[200px] rounded-lg bg-white shadow-lg 
+         hidden transition-all duration-300 
+         z-50 pointer-events-auto">
+  
+  <a href="../index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Beranda
+  </a>
+
+  <a href="../qgisweb_desa/index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Wilayah Desa
+  </a>
+
+  <a href="index.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white active-link">
+     Wilayah Kecamatan
+  </a>
+
+  <a href="../tentang.html"
+     class="block px-4 py-2 hover:bg-green-600 hover:text-white">
+     Tentang
+  </a>
+</div>
+
+>>>>>>> ed6e7b5a9da1aff9b2f28f5f5cfa5e9395f30901
 
   </div>
 </nav>
@@ -3035,6 +3066,12 @@ function removeEmptyRowsFromPopupContent(content, feature) {
         map.on("layerremove", function(){
             resetLabels([layer_BatasDesa_20,layer_KecamatanCilongok_21]);
         });
-        </script>        
+        </script>
+		<script>
+		function toggleMenu() {
+		  document.getElementById("toggle-content").classList.toggle("hidden");
+		}
+		</script>
+
     </body>
 </html>
